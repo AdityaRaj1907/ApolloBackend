@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:4.0.4
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - /home/ubuntu/cerebriu_project/mongodb_data:/data/db
+    networks:
+      - my_network
+
+  apollo_backend:
+    image: apollo/backend:ver01
+    container_name: apollo_backend
+    ports:
+      - "5003:5003"  # Assuming your Apollo backend runs on port 5003
+    volumes:
+      - /home/ubuntu/cerebriu_project/apollo_interface/backend_config.yaml:/app/backend_config.yaml
+      - /home/ubuntu/cerebriu_project/apollo_interface/series_mapping_config.xlsx:/app/series_mapping_config.xlsx
+      - /home/ubuntu/cerebriu_project/apollo_interface/scannerListConfig.xlsx:/app/scannerListConfig.xlsx
+      - /home/ubuntu/cerebriu_project/apollo_interface/logs/:/app/logs/
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/bin/docker:/usr/bin/docker
+    depends_on:
+      - mongodb
+    networks:
+      - my_network
+networks:
+  my_network:
+
+volumes:
+  mongodb_data:

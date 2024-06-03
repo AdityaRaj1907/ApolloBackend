@@ -1,0 +1,54 @@
+#Backend Apollo code
+
+#MongoDB configuration
+mongo:
+  host: mongodb
+  port: 27017
+  username: 'username1'        # Replace with the MongoDB username
+  password: 'password1'        # Replace with the MongoDB password
+  db_name: user-system
+
+# Flask config
+flask:
+  secret_key: 'apollobackend'
+  debug: True
+  host: '0.0.0.0'
+  port: 5003
+
+#path of excel sheet
+series_file_path: '/app/series_mapping_config.xlsx'
+#excel_file_path: 'series_mapping_config.xlsx'
+
+#path of scanner list sheet
+scanner_file_path: '/app/scannerListConfig.xlsx'
+
+#Set the character limit according to requirement
+series_description_character_limit: 10
+#Set the character limit according to requirement
+scanner_description_character_limit: 10
+
+#Set the image name which will have updated excel files
+series_image_name: 'scp'
+series_image_tag: 'v1'
+
+scanner_image_name: 'ui_back'
+scanner_image_tag: 'v1'
+
+# Docker series container configuration
+series_container_name: 'focused_austin'  # Name of the container for series mapping config
+series_container_path: '/app/'  # Destination path in series container
+
+#Scanner container config
+scanner_container_name: 'test_container'  # Name of the container for scanner list config
+scanner_container_path: '/sys/'  # Destination path in scanner container
+
+#log file config
+log_file_path: /app/logs/
+log_file: backend.log
+
+#allowed sequene type to be added while adding in the excel
+allowed_sequence_types:
+        - DWI
+        - FLAIR
+        - SWI
+        - GRE

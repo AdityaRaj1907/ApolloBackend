@@ -1,0 +1,600 @@
+{
+	"info": {
+		"_postman_id": "60a8c047-950f-4d2f-bf53-eaf3e346009e",
+		"name": "apollo_admin_interface server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31867635"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin@example.com\",\r\n    \"password\": \"adminpassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://65.0.44.123:5003/login",
+					"protocol": "http",
+					"host": [
+						"65",
+						"0",
+						"44",
+						"123"
+					],
+					"port": "5003",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"demouser002\",\r\n    \"password\": \"demouser002\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://65.0.44.123:5003/user",
+					"protocol": "http",
+					"host": [
+						"65",
+						"0",
+						"44",
+						"123"
+					],
+					"port": "5003",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"demouser002\",\r\n    \"password\": \"demouser002\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://65.0.44.123:5003/user/login",
+					"protocol": "http",
+					"host": [
+						"65",
+						"0",
+						"44",
+						"123"
+					],
+					"port": "5003",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All_User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://65.0.44.123:5003/user",
+					"protocol": "http",
+					"host": [
+						"65",
+						"0",
+						"44",
+						"123"
+					],
+					"port": "5003",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "One User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://65.0.44.123:5003/users/660a8400665a18e8523d147e",
+					"protocol": "http",
+					"host": [
+						"65",
+						"0",
+						"44",
+						"123"
+					],
+					"port": "5003",
+					"path": [
+						"users",
+						"660a8400665a18e8523d147e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"demouser001\",\r\n    \"password\": \"demouser001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://65.0.44.123:5003/users/660a8400665a18e8523d147e",
+					"protocol": "http",
+					"host": [
+						"65",
+						"0",
+						"44",
+						"123"
+					],
+					"port": "5003",
+					"path": [
+						"users",
+						"660a8400665a18e8523d147e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://65.0.44.123:5003/users/660a841d665a18e8523d147f",
+					"protocol": "http",
+					"host": [
+						"65",
+						"0",
+						"44",
+						"123"
+					],
+					"port": "5003",
+					"path": [
+						"users",
+						"660a841d665a18e8523d147f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "download user list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://65.0.44.123:5003/download/userlist",
+					"protocol": "http",
+					"host": [
+						"65",
+						"0",
+						"44",
+						"123"
+					],
+					"port": "5003",
+					"path": [
+						"download",
+						"userlist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "display all series",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://65.0.44.123:5003/series_description",
+					"protocol": "http",
+					"host": [
+						"65",
+						"0",
+						"44",
+						"123"
+					],
+					"port": "5003",
+					"path": [
+						"series_description"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add new series",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"sequence_type\": \"GRE\",\r\n    \"series_description\": \"GRE_test4\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://65.0.44.123:5003/series_description",
+					"protocol": "http",
+					"host": [
+						"65",
+						"0",
+						"44",
+						"123"
+					],
+					"port": "5003",
+					"path": [
+						"series_description"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify a series",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"sequence_type\": \"FLAIR\",\r\n    \"series_description\": \"FLAIR_1234\",\r\n    \"new_sequence_type\":\"FLAIR\",\r\n    \"new_series_description\":\"FLAIR_demo\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://65.0.44.123:5002/series_description",
+					"protocol": "http",
+					"host": [
+						"65",
+						"0",
+						"44",
+						"123"
+					],
+					"port": "5002",
+					"path": [
+						"series_description"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a series",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"sequence_type\": \"GRE\",\r\n    \"series_description\": \"GRE_test5\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://65.0.44.123:5003/series_description",
+					"protocol": "http",
+					"host": [
+						"65",
+						"0",
+						"44",
+						"123"
+					],
+					"port": "5003",
+					"path": [
+						"series_description"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "download  series",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://65.0.44.123:5003/download/series",
+					"protocol": "http",
+					"host": [
+						"65",
+						"0",
+						"44",
+						"123"
+					],
+					"port": "5003",
+					"path": [
+						"download",
+						"series"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All scanner",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"scanner_id\": \"12345\",\r\n    \"scanner_description\": \"scanner2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://65.0.44.123:5003/scanner_list",
+					"protocol": "http",
+					"host": [
+						"65",
+						"0",
+						"44",
+						"123"
+					],
+					"port": "5003",
+					"path": [
+						"scanner_list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Scanner",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"scanner_id\": \"1234\",\r\n    \"scanner_description\": \"test1234\",\r\n    \"ip_address\":\"192.1.2.23\",\r\n    \"ae_title\":\"aet1234\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://65.0.44.123:5003/scanner_list",
+					"protocol": "http",
+					"host": [
+						"65",
+						"0",
+						"44",
+						"123"
+					],
+					"port": "5003",
+					"path": [
+						"scanner_list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Scanner",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"scanner_id\": \"testid\",\r\n    \"scanner_description\": \"test11\",\r\n    \"ip_address\": \"192.1.6.123\" ,\r\n    \"ae_title\": \"aetitle\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://65.0.44.123:5003/scanner_list",
+					"protocol": "http",
+					"host": [
+						"65",
+						"0",
+						"44",
+						"123"
+					],
+					"port": "5003",
+					"path": [
+						"scanner_list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Scanner",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"scanner_id\": \"124299\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://65.0.44.123:5003/scanner_list",
+					"protocol": "http",
+					"host": [
+						"65",
+						"0",
+						"44",
+						"123"
+					],
+					"port": "5003",
+					"path": [
+						"scanner_list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "download scanner",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"scanner_id\": \"12345\",\r\n    \"scanner_description\": \"scanner2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://65.0.44.123:5003/download/scanner",
+					"protocol": "http",
+					"host": [
+						"65",
+						"0",
+						"44",
+						"123"
+					],
+					"port": "5003",
+					"path": [
+						"download",
+						"scanner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://65.0.44.123:5003/logout",
+					"protocol": "http",
+					"host": [
+						"65",
+						"0",
+						"44",
+						"123"
+					],
+					"port": "5003",
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://65.0.44.123:5002",
+			"type": "string"
+		}
+	]
+}
